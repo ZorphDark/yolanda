@@ -1,0 +1,28 @@
+include ../_layout/setup/path
+include ../_data/artworks
+
+mixin artwork(artwork)
+  li.work-item(class=artwork.categories.join(" "))
+    - var href = path.images + "content/portfolio/" + (artwork.filename ? artwork.filename : artwork.title) + "." + artwork.format;
+    a(href=href class="popup")
+      .work-image: img(src=href, alt=artwork.title)
+      .work-caption
+        h3.work-title.font-alt= artwork.title
+
+//- PORFOLIO
+section#portfolio.module-small.p-t-20.p-b-0
+  .container
+    //- FILTER
+    .row
+      .col-sm-12
+        ul#filters.filter.font-inc
+          - var count = 0;
+          for category, index in categories
+            - count++;
+            li: a.wow.fadeInUp(href='#' data-filter='.' + index data-wow-delay=(count)/4 + 's' class={current: count == 1})= category
+
+  //- LIST
+  - var grid = 3;
+  ul#works-grid.works-grid.works-grid-masonry.works-hover-w(class=`works-grid-${grid}`)
+    for artwork in portfolio
+      +artwork(artwork)

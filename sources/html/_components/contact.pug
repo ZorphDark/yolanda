@@ -1,0 +1,27 @@
+mixin message(title)
+  h2.module-title.align-center.font-alt= title
+  if block
+    p.module-subtitle.align-center.font-inc
+      block
+
+section#contact.module
+  .container
+    +message("say hello")
+      | Feel free to contact me if you have any questions...
+
+    //- CONTACT FORM
+    .row
+      .col-sm-6.col-sm-offset-3
+        form#contact-form
+          .form-group
+            label.sr-only(for='cname') Name
+            input#cname.form-control(type='text', name='cname', placeholder='Name', required='', data-validation-required-message='Please enter your name.', aria-invalid='false')
+            p.help-block.text-danger
+          .form-group
+            label.sr-only(for='cemail') Your Email
+            input#cemail.form-control(type='email', name='cemail', placeholder='Your E-mail', required='', data-validation-required-message='Please enter your email address.')
+            p.help-block.text-danger
+          .form-group
+            textarea#cmessage.form-control(name='cmessage', rows='7', placeholder='Message', required='', data-validation-required-message='Please enter your message.')
+            p.help-block.text-danger
+          button.btn.btn-round.btn-g(type='submit') Submit

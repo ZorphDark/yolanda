@@ -1,0 +1,18 @@
+{
+  "name": "Yolanda",
+  "description": "Yolanda Hernandez Santa Cruz' portfolio",
+  "homepage": "http://www.yolandahernandezsantacruz.com/",
+  "dependencies": {
+    "grunt": ">=0.4.0",
+    "grunt-banner": "~0.6.0",
+    "grunt-contrib-concat": "~1.0.0",
+    "grunt-contrib-pug": "~1.0.0",
+    "grunt-contrib-uglify": "~1.0.0",
+    "grunt-contrib-watch": ">=1.0.0",
+    "grunt-postcss": ">=0.8.0",
+    "postcss-clean": "^1.0.2",
+    "postcss-cssnext": "^2.7.0",
+    "precss": "^1.4.0",
+    "time-grunt": "~1.3.0"
+  }
+}
