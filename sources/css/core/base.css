@@ -44,4 +44,8 @@ body {
 
 .work-item {
   margin-top: -1px;
+
+  &:hover .work-image:after {
+    background: transparent;
+  }
 }
