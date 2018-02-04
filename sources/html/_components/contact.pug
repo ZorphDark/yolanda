@@ -12,7 +12,7 @@ section#contact.module
     //- CONTACT FORM
     .row
       .col-sm-6.col-sm-offset-3
-        form#contact-form
+        form#contact-form(autocomplete=false)
           .form-group
             label.sr-only(for='cname') Name
             input#cname.form-control(type='text', name='cname', placeholder='Name', autocomplete='name', required='', data-validation-required-message='Please enter your name.', aria-invalid='false')

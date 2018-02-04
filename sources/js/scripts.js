@@ -87,74 +87,6 @@
 		};
 
 		/* ---------------------------------------------- /*
-		 * Hero slider setup
-		/* ---------------------------------------------- */
-
-		if(mobileTest != true) {
-			directionNav = true;
-		} else {
-			directionNav = false;
-		}
-
-		if ($('.hero-slider').length > 0) {
-			$('.hero-slider').flexslider({
-				animation: 'fade',
-				slideshowSpeed: 7000,
-				animationSpeed: 1000,
-				animationLoop: true,
-				directionNav: false,
-				pauseOnHover: true,
-				touch: true,
-				prevText: '',
-				nextText: '',
-				start: function(slider) {
-					heroSliderLight();
-				},
-				before: function(slider) {
-					if(mobileTest != true) {
-						$('.hs-caption').fadeOut().animate({top:'-80px'},{queue:false, easing: 'swing', duration: 700});
-						slider.slides.eq(slider.currentSlide).delay(500);
-						slider.slides.eq(slider.animatingTo).delay(500);
-					}
-				},
-				after: function(slider) {
-					heroSliderLight();
-					if(mobileTest != true) {
-						$('.hs-caption').fadeIn().animate({top:'0'},{queue:false, easing: 'swing', duration: 700});
-					}
-				},
-				useCSS: true
-			});
-		};
-
-		/* ---------------------------------------------- /*
-		 * Change color on light slide
-		/* ---------------------------------------------- */
-
-		function heroSliderLight() {
-			if ($('li.bg-light').hasClass('flex-active-slide')) {
-				navbar.addClass('nabar-dark');
-				$('.hero-slider').addClass('hero-slider-dark');
-			} else {
-				navbar.removeClass('nabar-dark');
-				$('.hero-slider').removeClass('hero-slider-dark');
-			}
-		}
-
-		/* ---------------------------------------------- /*
-		 * Hero slider pause on scroll
-		/* ---------------------------------------------- */
-
-		if ($('.hero-slider').length > 0) {
-			$(window).scroll(function() {
-				var st = $(window).scrollTop();
-				if (st > 0) {
-					$('.hero-slider').flexslider('pause');
-				}
-			});
-		}
-
-		/* ---------------------------------------------- /*
 		 * Navbar href animation
 		/* ---------------------------------------------- */
 
@@ -265,31 +197,31 @@
 		 * Youtube video background
 		/* ---------------------------------------------- */
 
-		if(mobileTest != true) {
-			$(function() {
-				$(".video-player").mb_YTPlayer();
-			});
+		// if(mobileTest != true) {
+		// 	$(function() {
+		// 		$(".video-player").mb_YTPlayer();
+		// 	});
 
-			$('.video-controls-box a').css('visibility', 'visible');
+		// 	$('.video-controls-box a').css('visibility', 'visible');
 
-			$('#video-play').click(function(event) {
-				event.preventDefault();
-				if ($(this).hasClass('fa-play')) {
-					$('.video-player').playYTP();
-				} else {
-					$('.video-player').pauseYTP();
-				}
-				$(this).toggleClass('fa-play fa-pause');
-				return false;
-			});
+		// 	$('#video-play').click(function(event) {
+		// 		event.preventDefault();
+		// 		if ($(this).hasClass('fa-play')) {
+		// 			$('.video-player').playYTP();
+		// 		} else {
+		// 			$('.video-player').pauseYTP();
+		// 		}
+		// 		$(this).toggleClass('fa-play fa-pause');
+		// 		return false;
+		// 	});
 
-			$('#video-volume').click(function(event) {
-				event.preventDefault();
-				$('.video-player').toggleVolume();
-				$(this).toggleClass('fa-volume-off fa-volume-up');
-				return false;
-			});
-		}
+		// 	$('#video-volume').click(function(event) {
+		// 		event.preventDefault();
+		// 		$('.video-player').toggleVolume();
+		// 		$(this).toggleClass('fa-volume-off fa-volume-up');
+		// 		return false;
+		// 	});
+		// }
 
 		/* ---------------------------------------------- /*
 		 * Portfolio
@@ -325,15 +257,6 @@
 			});
 
 			return false;
-		});
-
-		/* ---------------------------------------------- /*
-		 * Post slider
-		/* ---------------------------------------------- */
-
-		$('.post-images-slider').flexslider( {
-			animation: 'slide',
-			smoothHeight: true,
 		});
 
 		/* ---------------------------------------------- /*
@@ -425,20 +348,10 @@
 		});
 
 		/* ---------------------------------------------- /*
-		 * Rotate
-		/* ---------------------------------------------- */
-
-		// $(".rotate").textrotator({
-		// 	animation: "dissolve",
-		// 	separator: "|",
-		// 	speed: 3000
-		// });
-
-		/* ---------------------------------------------- /*
 		 * A jQuery plugin for fluid width video embeds
 		/* ---------------------------------------------- */
 
-		$('body').fitVids();
+		// $('body').fitVids();
 
 		/* ---------------------------------------------- /*
 		 * Scroll Animation

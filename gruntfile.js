@@ -62,7 +62,6 @@ module.exports = function(grunt) {
  			css: {
  				files: {
  					'<%= path.css.dist %>styles.min.css': [
-            '<%= path.css.source %>vendor/slider.min.css',
             '<%= path.css.source %>vendor/vertical.min.css',
             '<%= path.css.source %>vendor/theme.min.css',
  					  '<%= path.css.source %>compiled.min.css'
