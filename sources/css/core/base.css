@@ -3,6 +3,9 @@ body {
 }
 
 .module-hero {
+  display: flex;
+  align-items: center;
+  text-align: center;
   @media(--small-viewport) {
     height: auto !important;
     margin-top: 50px;
