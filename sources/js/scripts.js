@@ -17,7 +17,6 @@
 			mobileTest = true;
 		}
 
-		buildModuleHero(moduleHero);
 		navbarCheck(navbar);
 		navbarHref(navbar);
 		navbarAnimation(navbar, moduleHero, navHeight);
@@ -26,7 +25,6 @@
 
 		$(window).resize(function() {
 			var width = Math.max($(window).width(), window.innerWidth);
-			buildModuleHero(moduleHero);
 			hoverDropdown(width);
 		});
 
@@ -44,20 +42,6 @@
 				$(this).css('background-image', 'url(' + $(this).attr('data-background') + ')');
 			}
 		});
-
-		/* ---------------------------------------------- /*
-		 * Full height module
-		/* ---------------------------------------------- */
-
-		function buildModuleHero(moduleHero) {
-			if (moduleHero.length > 0) {
-				if (moduleHero.hasClass('module-full-height')) {
-					moduleHero.height($(window).height());
-				} else {
-					moduleHero.height($(window).height() * 0.85);
-				}
-			}
-		};
 
 		/* ---------------------------------------------- /*
 		 * Hero module parallax, fade
