@@ -10,7 +10,11 @@ mixin artwork(artwork)
         <!-- h3.work-title.font-alt= artwork.title -->
 
 //- PORFOLIO
+
 section#portfolio.module-small.p-t-20.p-b-0
+  .page-loader
+    .loader Loading...
+    
   .container
     //- FILTER
     .row
@@ -23,6 +27,6 @@ section#portfolio.module-small.p-t-20.p-b-0
 
   //- LIST
   - var grid = 3;
-  ul#works-grid.works-grid.works-grid-masonry.works-hover-w(class=`works-grid-${grid}`)
-    for artwork in portfolio
-      +artwork(artwork)
+    ul#works-grid.works-grid.works-grid-masonry.works-hover-w(class=`works-grid-${grid}`)
+      for artwork in portfolio
+        +artwork(artwork)

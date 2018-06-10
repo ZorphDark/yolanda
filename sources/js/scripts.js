@@ -190,8 +190,15 @@
 			worksgrid_mode = 'fitRows';
 		}
 
+		worksgrid.hide();
+
 		worksgrid.imagesLoaded(function () {
-			worksgrid.isotope({
+			
+			$('.loader').hide();
+			$('.page-loader').hide();
+			worksgrid.show();
+
+		 	worksgrid.isotope({
 				filter: $('#filters .current').attr('data-filter'),
 				layoutMode: worksgrid_mode,
 				itemSelector: '.work-item',

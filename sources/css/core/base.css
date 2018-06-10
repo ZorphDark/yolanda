@@ -54,3 +54,13 @@ body {
     content: none;
   }
 }
+
+.page-loader {
+  position: absolute;
+  background: #fff;
+  right: 0;
+  left: 0;
+  z-index: 9998;
+  height: 25vh;
+  min-height: 100px;
+}
