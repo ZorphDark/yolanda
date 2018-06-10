@@ -19,7 +19,7 @@ section#portfolio.module-small.p-t-20.p-b-0
           - var count = 0;
           for category, index in categories
             - count++;
-            li: a.wow.fadeInUp(href='#' data-filter='.' + index data-wow-delay=(count)/4 + 's' class={current: count == 1})= category
+            li: a.wow.invisible.fadeInUp(href='#' data-filter='.' + index data-wow-delay=(count)/4 + 's' class={current: count == 1})= category
 
   //- LIST
   - var grid = 3;
